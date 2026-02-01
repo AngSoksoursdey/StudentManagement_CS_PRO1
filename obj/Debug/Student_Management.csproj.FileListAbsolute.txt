@@ -8,4 +8,8 @@ D:\Project C#\Project\Student_Management\Student_Management\obj\Debug\Student_Ma
 D:\Project C#\Project\Student_Management\Student_Management\obj\Debug\Student_Management.csproj.CoreCompileInputs.cache
 D:\Project C#\Project\Student_Management\Student_Management\obj\Debug\Student_Management.exe
 D:\Project C#\Project\Student_Management\Student_Management\obj\Debug\Student_Management.pdb
-D:\Project C#\Project\Student_Management\Student_Management\obj\Debug\Student_Management.Student_Form.resources
+D:\Project C#\Project\Student_Management\Student_Management\obj\Debug\Student_Management.DashBoard.resources
+D:\Project C#\Project\Student_Management\Student_Management\obj\Debug\Student_Management.Forms.ScoreForm.resources
+D:\Project C#\Project\Student_Management\Student_Management\obj\Debug\Student_Management.Forms.StudentForm.resources
+D:\Project C#\Project\Student_Management\Student_Management\obj\Debug\Student_Management.Forms.TeacherForm.resources
+D:\Project C#\Project\Student_Management\Student_Management\obj\Debug\Student_Management.Forms.Examination.resources

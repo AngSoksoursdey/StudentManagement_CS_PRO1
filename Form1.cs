@@ -19,38 +19,57 @@ namespace Student_Management
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
+            try
+            {
 
-            if (username == "admin" && password == "admin")
-            {
-                MessageBox.Show("Login Successful!");
-                Student_Form asd = new Student_Form();
-                asd.ShowDialog(this);
+                string id = server_name_txt.Text;
+                string db = "dbSchoolManagement";
+                string usernanme = txtUsername.Text;
+                string password = txtPassword.Text;
+                int index = authentication_combo.SelectedIndex;
+                if (index == 0) // Windows Authentication
+                {
+                    connection.ConnectDB(id, db);
 
-                // Proceed to the next form or main application window
-            }
-            else if (username == "admin")
-            {
-                MessageBox.Show("Please enter the correct password.");
-            }
-            else if (password == "admin")
-            {
-                MessageBox.Show("Please enter the correct username.");
-            }
+                }
+                else
+                {
+                    connection.ConnectDB(id, db, usernanme, password);
+                }
+                new DashBoard().Show();
+                this.Hide();
 
-            else if (username == "admin")
-            {
-                MessageBox.Show("Please enter the username.");
+
+
+
             }
-            else if (password == "")
+            catch (Exception ex)
             {
-                MessageBox.Show("Please enter the password.");
+                MessageBox.Show(ex.Message);
+
             }
-            else
+        }
+
+        private void authentication_combo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index =  authentication_combo.SelectedIndex;
+
+            if (index == 0) // Windows Authentication
             {
-                MessageBox.Show("Please enter username and password.");
+                txtUsername.Enabled = false;
+                txtPassword.Enabled = false;
             }
+            else if (index == 1) // SQL Server Authentication
+            {
+                txtUsername.Enabled = true;
+                txtPassword.Enabled = true;
+            }
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
         }
     }
 }
